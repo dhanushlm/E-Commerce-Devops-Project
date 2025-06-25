@@ -49,8 +49,8 @@ services:
     image: ${IMAGE_NAME}:${DEMO_VERSION}-ad
     container_name: ad
     build:
-      context: ./
-      dockerfile: ${AD_DOCKERFILE}
+      context: ./src/ad
+      dockerfile: Dockerfile
       cache_from:
         - ${IMAGE_NAME}:${IMAGE_VERSION}-ad
       args:
