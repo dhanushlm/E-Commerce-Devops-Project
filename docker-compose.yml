@@ -527,8 +527,8 @@ services:
     image: ${IMAGE_NAME}:${DEMO_VERSION}-recommendation
     container_name: recommendation
     build:
-      context: ./
-      dockerfile: ${RECOMMENDATION_DOCKERFILE}
+      context: ./src/recommendation
+      dockerfile: Dockerfile
       cache_from:
         - ${IMAGE_NAME}:${IMAGE_VERSION}-recommendation
     deploy:
